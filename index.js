@@ -34,11 +34,11 @@ app.on('ready', () => {
 
 function addNewFaceWindow () {
     // Eliminamos la barra de navegacion superior
-    //Menu.setApplicationMenu(null);
+    Menu.setApplicationMenu(null);
     
     addNewFace = new BrowserWindow({
-        width: 400,
-        height: 270,
+        width: 450,
+        height: 530,
         title: "Añadir sujeto",
         resizable: false,
         //frame: false
