@@ -13,8 +13,20 @@ body {
 /* ------------------------------------------------------------------------------- */
 .contenedor {
     max-width: 1200px;
-    width: 95%;
+    height: 100%;
     margin: 0 auto;
+    background-image: url("../../img/banner.jpg");
+    background-size: 100%;
+    
+    min-height: 100%;
+    min-width: 100%;
+
+    height: auto;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 h1 {
     font-size: 4.8rem;
@@ -42,21 +54,26 @@ img {
 }
 
 /* ------------------------------------------------------------------------------- */
+.welcome {
+    margin-top: 3rem;
+}
 .botones {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-top: 5rem;
 }
 .button {
     margin: 2rem 0 0 0;
     text-decoration: none;
+    text-transform: uppercase;
     border-radius:10px;
     z-index: 1;
     position: relative;
     font-size: inherit;
     font-family: inherit;
     color: white;
-    padding: 0.5em 1em;
+    padding: 2rem 4rem;
     outline: none;
     border: none;
     background-color: #33112f;
@@ -94,9 +111,7 @@ a.button {
     margin: 1rem auto;
     background-color: #4c1a47;
 }
-.titulo {
-    text-align: center;
-}
+
 /* ---------------------------------------------------------- */
 /* AddNewFace page */
 label {

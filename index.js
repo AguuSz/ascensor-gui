@@ -19,7 +19,10 @@ app.on('ready', () => {
     mainWindow = new BrowserWindow({
         webPreferences: {
             nodeIntegration: true
-        }
+        },
+        width: 870,
+        height: 600,
+        resizable: false
     });
     mainWindow.loadURL(url.format({
         pathname: path.join(__dirname, 'src/views/index.html'),
