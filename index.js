@@ -37,9 +37,6 @@ app.on('ready', () => {
 });
 
 function addNewFaceWindow () {
-    // Eliminamos la barra de navegacion superior
-    Menu.setApplicationMenu(null);
-    
     addNewFace = new BrowserWindow({
         width: 450,
         height: 530,
@@ -56,6 +53,7 @@ function addNewFaceWindow () {
         addNewFace = null;
     })
 }
+
 
 // Cuando se aprete un boton de cancelar, mostrar esta ventana
 function confirmationWindow () {

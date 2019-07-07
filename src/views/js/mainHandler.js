@@ -1,6 +1,6 @@
-const electron = require('electron');
-const app = electron.remote.app;
-const BrowserWindow = electron.remote.BrowserWindow;
+const remotex = require('electron').remote;
+const app = remotex.app;
+const BrowserWindow = remotex.BrowserWindow;
 const path = require('path');
 const url = require('url');
 
@@ -12,11 +12,14 @@ addNewFaceBtn.addEventListener('click', function(event) {
         width: 450,
         height: 530,
         title: "Añadir sujeto",
-        resizable: false,
+        //resizable: false,
         //frame: false
+        webPreferences: {
+            nodeIntegration: true
+        }
     });
     addNewFace.loadURL(url.format({
-        pathname: path.join(__dirname, "../addNewFace.html"),
+        pathname: path.join(__dirname, "../views/addNewFace.html"),
         protocol: 'file',
         slashes: true
     }));
@@ -28,5 +31,9 @@ addNewFaceBtn.addEventListener('click', function(event) {
 const salirBtn = document.getElementById('salir');
 salirBtn.addEventListener('click', function(event) {
     app.quit();
+})
+const tutorialBtn = document.getElementById('tutorial');
+tutorialBtn.addEventListener('click', function(event) {
+    console.log(path.join(__dirname, "../views/addNewFace.html"));
 })
 
