@@ -22,13 +22,15 @@ app.on('ready', () => {
         },
         width: 870,
         height: 600,
-        resizable: false
+        resizable: false,
+        icon: __dirname + "../img/icono.ico"
     });
     mainWindow.loadURL(url.format({
         pathname: path.join(__dirname, 'src/views/index.html'),
         protocol: 'file',
         slashes: true
     }))
+    console.log(__dirname);
 
     const mainMenu = Menu.buildFromTemplate(templateMenu);
     Menu.setApplicationMenu(mainMenu)
@@ -45,6 +47,7 @@ function addNewFaceWindow () {
         height: 530,
         title: "Añadir sujeto",
         resizable: false,
+        icon: path.join(__dirname, 'src', 'img', 'icono.ico'),
         //frame: false
     });
     addNewFace.loadURL(url.format({

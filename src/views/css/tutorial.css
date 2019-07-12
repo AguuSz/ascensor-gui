@@ -1,0 +1,97 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+/* ------------------------------------------------------------------------------- */
+.contenedor {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url("../../img/banner.jpg");
+    background-size: 100%;
+    
+    min-height: 100%;
+    min-width: 100%;
+
+    height: auto;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+h1 {
+    font-size: 4.8rem;
+    margin: 0.5rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3.2rem;
+}
+h4 {
+    font-size: 2.6rem;
+}
+img {
+    max-width: 100%;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* Utilidades */
+.centrar-texto {
+    text-align: center;
+}
+.no-margin {
+    margin: 0;
+}
+/* ------------------------------------------------------------------------------- */
+/* Cuerpo */
+.titulo {
+    margin-bottom: 0;
+}
+.buttons {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto
+}
+a {
+  text-decoration: none;
+  color: white;
+  background: #F2385A;
+  position: relative;
+  top: 2rem;
+  padding: 16px;
+  font-size: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 15px 0px 0px darken(#F2385A, 5%), 0px 0px 20px 0px #bbb;
+
+  transition: all 0.2s;
+}
+  
+a:active {
+  top: 2.8rem;
+  box-shadow: 0px 7px 0px 0px darken(#F2385A, 5%);
+}
+.button1 {
+  background-color: #F2385A;
+}
+.button2 {
+  background-color: #3498DB;
+  box-shadow: 0px 15px 0px 0px darken(#3498DB, 5%);
+}
+.instruccionesBox {
+    padding-left: 2rem; 
+    margin: 0 0.5rem;
+    background: white;
+    border-left: 0.6rem solid black;
+    border-radius: 1rem;
+}

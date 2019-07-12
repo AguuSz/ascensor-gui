@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "electron": "^5.0.6",
-    "electron-reload": "^1.4.0"
+    "electron-reload": "^1.4.0",
+    "python-shell": "^1.0.7",
+    "sweetalert2": "^8.13.4"
   }
 }
