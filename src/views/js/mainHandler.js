@@ -5,28 +5,18 @@ const path = require('path');
 const url = require('url');
 
 let tutorialWindow;
-let addNewFace;
 
-const addNewFaceBtn = document.getElementById('iniciar');
-addNewFaceBtn.addEventListener('click', function(event) {
+const iniciar = document.getElementById('iniciar');
+iniciar.addEventListener('click', function(event) {
     
-    addNewFace = new BrowserWindow({
-        width: 450,
-        height: 300,
-        title: "Añadir sujeto",
-        //resizable: false,
-        frame: false,
-        webPreferences: {
-            nodeIntegration: true
-        }
-    });
-    addNewFace.loadURL(url.format({
-        pathname: path.join(__dirname, "../views/addNewFace.html"),
+    var window = remotex.getCurrentWindow();
+    window.loadURL(url.format({
+        pathname: path.join(__dirname, "../views/homepage.html"),
         protocol: 'file',
         slashes: true
     }));
-    addNewFace.on('closed', () => {
-        addNewFace = null;
+    window.on('closed', () => {
+        window = null;
     })
 })
 

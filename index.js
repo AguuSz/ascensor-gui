@@ -11,9 +11,8 @@ const path = require('path');
 //}
 
 // Declaramos las ventanas que se van a abrir
-let mainWindow
-let addNewFace
-let confirmation
+let mainWindow;
+let iniciarWindow;
 
 app.on('ready', () => {
     mainWindow = new BrowserWindow({
@@ -40,24 +39,6 @@ app.on('ready', () => {
     })
 });
 
-function addNewFaceWindow () {
-    addNewFace = new BrowserWindow({
-        width: 450,
-        height: 530,
-        title: "Añadir sujeto",
-        resizable: false,
-        icon: path.join(__dirname, 'src', 'img', 'icono.ico'),
-        //frame: false
-    });
-    addNewFace.loadURL(url.format({
-        pathname: path.join(__dirname, "src/views/addNewFace.html"),
-        protocol: 'file',
-        slashes: true
-    }));
-    addNewFace.on('closed', () => {
-        addNewFace = null;
-    })
-}
 
 // Creando un menu de navegacion custom
 const templateMenu = [
