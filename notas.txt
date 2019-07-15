@@ -1,0 +1,2 @@
+Para hacer que sweetalert ande correctamente, hace falta eliminar el electron-reload.
+Ya que al parecer cuando el script python termina su ejecucion y guarda la imagen, aparentemente electron-reload lo interpreta como si hubo algun cambio en los archivos html y actualiza, sin mostrar la alerta.

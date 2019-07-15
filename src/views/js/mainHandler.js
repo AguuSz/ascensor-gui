@@ -8,11 +8,10 @@ let tutorialWindow;
 
 const addNewFaceBtn = document.getElementById('iniciar');
 addNewFaceBtn.addEventListener('click', function(event) {
-    //Menu.setApplicationMenu(null);
     
     addNewFace = new BrowserWindow({
         width: 450,
-        height: 530,
+        height: 300,
         title: "Añadir sujeto",
         //resizable: false,
         frame: false,
