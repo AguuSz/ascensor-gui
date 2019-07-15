@@ -53,6 +53,18 @@ img {
 .no-margin {
     margin: 0;
 }
+.swal2-title {
+    font-size: 3rem !important;
+}
+.swal2-content {
+    font-size: 2rem !important;
+}
+.swal2-confirm {
+    font-size: 1.6rem !important;
+}
+.swal2-cancel {
+    font-size: 1.6rem !important;
+}
 /* ------------------------------------------------------------------------------- */
 /* Cuerpo */
 .titulo {

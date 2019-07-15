@@ -59,29 +59,6 @@ function addNewFaceWindow () {
     })
 }
 
-
-// Cuando se aprete un boton de cancelar, mostrar esta ventana
-function confirmationWindow () {
-    Menu.setApplicationMenu(null);
-
-    confirmation = new BrowserWindow({
-        width: 300,
-        height: 130,
-        title: "Confirmación",
-        resizable: false,
-        frame: false
-    });
-
-    confirmation.loadURL(url.format({
-        pathname: path.join(__dirname, "src/views/confirmation.html"),
-        protocol: 'file',
-        slashes: true
-    }));
-    confirmation.on('closed', () => {
-        confirmation = null;
-    })
-}
-
 // Creando un menu de navegacion custom
 const templateMenu = [
     {

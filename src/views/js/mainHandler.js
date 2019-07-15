@@ -5,6 +5,7 @@ const path = require('path');
 const url = require('url');
 
 let tutorialWindow;
+let addNewFace;
 
 const addNewFaceBtn = document.getElementById('iniciar');
 addNewFaceBtn.addEventListener('click', function(event) {
@@ -43,7 +44,7 @@ tutorialBtn.addEventListener('click', function(event) {
         width: 870,
         height: 600,
         //resizable: false
-        show: false,
+        //show: false,
     });
 
     tutorialWindow.loadURL(url.format({
@@ -52,9 +53,9 @@ tutorialBtn.addEventListener('click', function(event) {
         slashes: true
     }));
 
-    tutorialWindow.on('ready-to-show', () => {
-        tutorialWindow.show();
-    })
+    //tutorialWindow.on('ready-to-show', () => {
+    //    tutorialWindow.show();
+    //})
 
     tutorialWindow.on('closed', () => {
         tutorialWindow = null;
