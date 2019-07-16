@@ -26,29 +26,14 @@ salirBtn.addEventListener('click', function(event) {
 })
 const tutorialBtn = document.getElementById('tutorial');
 tutorialBtn.addEventListener('click', function(event) {
-    // Si presionan el Btn de tutorial, que pase esto
-    tutorialWindow = new BrowserWindow({
-        webPreferences: {
-            nodeIntegration: true
-        },
-        width: 870,
-        height: 600,
-        //resizable: false
-        //show: false,
-    });
-
-    tutorialWindow.loadURL(url.format({
-        pathname: path.join(__dirname, "tutorial.html"),
+    
+    var window = remotex.getCurrentWindow();
+    window.loadURL(url.format({
+        pathname: path.join(__dirname, "../views/tutorial.html"),
         protocol: 'file',
         slashes: true
     }));
-
-    //tutorialWindow.on('ready-to-show', () => {
-    //    tutorialWindow.show();
-    //})
-
-    tutorialWindow.on('closed', () => {
-        tutorialWindow = null;
+    window.on('closed', () => {
+        window = null;
     })
 })
-

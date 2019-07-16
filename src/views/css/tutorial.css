@@ -70,35 +70,43 @@ img {
 .titulo {
     margin-bottom: 0;
 }
-.buttons {
+.boton {
   text-align: center;
-  margin-left: auto;
-  margin-right: auto
-}
-a {
+  margin: 0 0 0 1rem;
   text-decoration: none;
   color: white;
   background: #F2385A;
   position: relative;
   top: 2rem;
-  padding: 16px;
+  padding: 0.7rem 2rem;
   font-size: 2rem;
   border-radius: 10px;
   box-shadow: 0px 15px 0px 0px darken(#F2385A, 5%), 0px 0px 20px 0px #bbb;
 
   transition: all 0.2s;
 }
-  
-a:active {
+.boton:active {
   top: 2.8rem;
   box-shadow: 0px 7px 0px 0px darken(#F2385A, 5%);
 }
-.button1 {
-  background-color: #F2385A;
+.boton:hover {
+    cursor: pointer;
+    animation: jelly 0.5s;
 }
-.button2 {
-  background-color: #3498DB;
-  box-shadow: 0px 15px 0px 0px darken(#3498DB, 5%);
+@keyframes jelly {
+    0%,
+    100% {
+        transform: scale(1, 1);
+    }
+    25% {
+        transform: scale(0.9, 1.1);
+    }
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+    75% {
+        transform: scale(0.95, 1.05);
+    }
 }
 .instruccionesBox {
     padding-left: 2rem; 
@@ -106,4 +114,7 @@ a:active {
     background: white;
     border-left: 0.6rem solid black;
     border-radius: 1rem;
+}
+.boton-derecha{
+    float: right;
 }
