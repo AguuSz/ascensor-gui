@@ -14,5 +14,5 @@ atrasBtn.addEventListener('click', function(event) {
 });
 const siguienteBtn = document.getElementById('siguienteBtn');
 siguienteBtn.addEventListener('click', function(event) {
-
+    // Boton de siguiente
 });
