@@ -38,28 +38,19 @@ borrarBtn.addEventListener('click', function(event) {
     
     var ruta = path.join(__dirname, '..', 'scripts', 'faces');
     try {
-        if (fs.existsSync(ruta)) {
-            swal.fire(
-                'Exito!',
-                'El directorio existe!',
-                'success'
-            );
-        } else {
-            swal.fire(
-                'Lastima!',
-                'El directorio no existe!',
-                'error'
-            );
+        if (!fs.existsSync(ruta)) {
+            fs.mkdirSync(ruta)
         }
     } catch(err) {
         console.error(err)
     }
-    //remoteWindow.shell.openItem(path.join(__dirname, '..', 'scripts', 'faces'));
-    // swal.fire(
-    //     'Buen trabajo',
-    //     'Haz abierto el directorio',
-    //     'success'
-    // )
+    swal.fire(
+        'Instrucciones',
+        'Se abrirá el directorio, lo unico que debe hacer para eliminar a una persona es borrar su foto.',
+        'question'
+    )
+    setTimeout(openDir, 3000);
+    
 })
 
 const salirBtn = document.getElementById('salirBtn');
@@ -67,3 +58,7 @@ salirBtn.addEventListener('click', function(event) {
     var window = remoteWindow.getCurrentWindow();
     window.close();
 })
+
+function openDir() {
+    remoteWindow.shell.openItem(path.join(__dirname, '..', 'scripts', 'faces'))
+}
