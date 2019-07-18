@@ -10,8 +10,9 @@ command line args: imgfile, name_of_person_in_image
 
 s, img, name = sys.argv
 
-if (os.path.exists("faces") == False):
-    os.mkdir("faces")
+os.chdir('src/scripts/')
+if os.path.exists('faces') == False:
+    os.mkdir('faces')
 
 if img == "cam":
     cam = cv2.VideoCapture(0)

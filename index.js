@@ -4,11 +4,11 @@ const path = require('path');
 
 // Si el proceso esta en cualquier fase diferente a la de produccion, que se pueda
 // recargar utilizando electron-reload
-if (process.env.NODE_ENV !== 'production') {
-   require('electron-reload')(__dirname, {
-       electron: path.join(__dirname, 'node_modules', '.bin', 'electron')
-   })
-}
+// if (process.env.NODE_ENV !== 'production') {
+//    require('electron-reload')(__dirname, {
+//        electron: path.join(__dirname, 'node_modules', '.bin', 'electron')
+//    })
+// }
 
 // Declaramos las ventanas que se van a abrir
 let mainWindow;

@@ -4,7 +4,7 @@ const path = require('path');
 const remote = require('electron').remote;
 
 // Funcion para añadir un rostro
-const addBtn = document.getElementById('añadirBtn');
+const addBtn = document.getElementById('addBtn');
 addBtn.addEventListener('click', function(event) {
     name = document.getElementById("name").value;
 
