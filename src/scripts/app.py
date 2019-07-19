@@ -3,11 +3,12 @@ import cv2
 import numpy as np
 import os
 
+os.chdir('src/scripts/')
+
 # Cargue otra imagen de entrenamiento y que aprenda a reconocerla
 def list_files(ruta, extension):
     return [f for f in os.listdir(ruta) if f.endswith('.' + extension)]
 
-print(list_files('faces/', 'jpg'))
 
 archivos = list_files('faces/', 'jpg')
 

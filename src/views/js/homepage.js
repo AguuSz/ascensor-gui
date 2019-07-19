@@ -3,15 +3,25 @@ const path = require('path');
 const url = require('url');
 const swal = require('sweetalert2');
 const fs = require('fs');
+const ps = require('python-shell');
 
 const iniciar = document.getElementById('iniciarBtn');
 iniciar.addEventListener('click', function(event) {
     
-    swal.fire(
-        'Buen trabajo',
-        'Se ha iniciado el programa',
-        'success'
-    )
+    var options = {
+        scriptPath: path.join(__dirname, "../", "scripts"),
+        pythonPath: "/home/agus/.local/share/virtualenvs/facialRecog-OpenCV-SWeLqkmQ/bin/python"
+    }
+
+    ps.PythonShell.run('app.py', options, function(err, results) {
+        if(err) throw err;
+        console.log(results);
+        swal.fire(
+            'Buen trabajo',
+            'Se ha iniciado el programa',
+            'success'
+        )
+    });
 })
 const añadirBtn = document.getElementById('añadirBtn');
 añadirBtn.addEventListener('click', function(event) {
