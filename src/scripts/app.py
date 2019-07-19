@@ -82,7 +82,7 @@ while True:
         cv2.putText(frame, name, (left + 6, bottom - 6), font, 0.7, (255, 255, 255), 1)
 
     # Que muestre la imagen final
-    cv2.imshow('Video', frame)
+    cv2.imshow('Presione Q para salir del programa', frame)
 
     # Apretar Q para salir
     if cv2.waitKey(1) & 0xFF == ord('q'):
