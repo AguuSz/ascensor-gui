@@ -4,11 +4,15 @@ import numpy as np
 import os
 
 os.chdir('src/scripts/')
+if os.path.exists('faces') == False:
+    os.mkdir('faces')
 
 # Cargue otra imagen de entrenamiento y que aprenda a reconocerla
 def list_files(ruta, extension):
     return [f for f in os.listdir(ruta) if f.endswith('.' + extension)]
 
+if len(os.listdir('faces/')) == 0:
+    print('xd')
 
 archivos = list_files('faces/', 'jpg')
 

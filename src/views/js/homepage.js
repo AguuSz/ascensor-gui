@@ -17,6 +17,11 @@ iniciar.addEventListener('click', function(event) {
         if(err) throw err;
         console.log(results);
         swal.fire(
+            'No existe ninguna imagen',
+            '¿Ha considerado agregar un usuario primero?',
+            'question'
+        )
+        swal.fire(
             'Buen trabajo',
             'Se ha iniciado el programa',
             'success'

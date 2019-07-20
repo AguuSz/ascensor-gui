@@ -23,9 +23,6 @@ if img == "cam":
         dir_path = os.path.dirname(os.path.realpath(__file__)) + "/faces/"
         if cv2.waitKey(10) & 0xFF == ord('a'):
             cv2.imwrite(dir_path + name + '.jpg', frame)
-            encodings = fr.face_encodings(frame)[0]
-            with open('dataset_face.dat', 'wb') as f:
-                pk.dump(encodings, f)
             break
 cam.release()
 cv2.destroyAllWindows()
