@@ -31,7 +31,7 @@ app.on('ready', () => {
         slashes: true
     }))
 
-    //const mainMenu = Menu.buildFromTemplate(templateMenu);
+    const mainMenu = Menu.buildFromTemplate(templateMenu);
     
     //Menu.setApplicationMenu(mainMenu)
 

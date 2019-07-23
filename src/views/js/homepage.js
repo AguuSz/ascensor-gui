@@ -4,6 +4,7 @@ const url = require('url');
 const swal = require('sweetalert2');
 const fs = require('fs');
 const ps = require('python-shell');
+const dirname = path.join(__dirname, '../', 'scripts/', 'faces/')
 
 const iniciar = document.getElementById('iniciarBtn');
 iniciar.addEventListener('click', function(event) {
@@ -15,17 +16,6 @@ iniciar.addEventListener('click', function(event) {
 
     ps.PythonShell.run('app.py', options, function(err, results) {
         if(err) throw err;
-        console.log(results);
-        swal.fire(
-            'No existe ninguna imagen',
-            '¿Ha considerado agregar un usuario primero?',
-            'question'
-        )
-        swal.fire(
-            'Buen trabajo',
-            'Se ha iniciado el programa',
-            'success'
-        )
     });
 })
 const añadirBtn = document.getElementById('añadirBtn');

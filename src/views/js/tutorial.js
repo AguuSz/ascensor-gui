@@ -12,7 +12,11 @@ atrasBtn.addEventListener('click', function(event) {
         slashes: true
     }));
 });
-const siguienteBtn = document.getElementById('siguienteBtn');
-siguienteBtn.addEventListener('click', function(event) {
-    // Boton de siguiente
-});
+
+const salirBtn = document.getElementById('salirBtn');
+if (salirBtn != null) {
+    salirBtn.addEventListener('click', function(event) {
+        var window = remote.getCurrentWindow();
+        window.close();
+    });
+}
