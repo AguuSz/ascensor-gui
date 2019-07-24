@@ -15,7 +15,7 @@ let mainWindow;
 let iniciarWindow;
 
 app.on('ready', () => {
-	// Menu.setApplicationMenu(null);
+	Menu.setApplicationMenu(null);
 	mainWindow = new BrowserWindow({
 		webPreferences : {
 			nodeIntegration : true
@@ -23,7 +23,7 @@ app.on('ready', () => {
 		width          : 870,
 		height         : 580,
 		//resizable: false,
-		icon           : __dirname + '../img/icono.ico'
+		icon           : __dirname + '../img/iconoide.png'
 	});
 	mainWindow.loadURL(
 		url.format({
@@ -35,7 +35,7 @@ app.on('ready', () => {
 
 	const mainMenu = Menu.buildFromTemplate(templateMenu);
 
-	Menu.setApplicationMenu(mainMenu);
+	// Menu.setApplicationMenu(mainMenu);
 
 	// Cuando se cierre la ventana principal, cierra todo el resto
 	mainWindow.on('closed', () => {
