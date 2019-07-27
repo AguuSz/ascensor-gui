@@ -4,18 +4,18 @@ const path = require('path');
 
 // Si el proceso esta en cualquier fase diferente a la de produccion, que se pueda
 // recargar utilizando electron-reload
-if (process.env.NODE_ENV !== 'production') {
-	require('electron-reload')(__dirname, {
-		electron : path.join(__dirname, 'node_modules', '.bin', 'electron')
-	});
-}
+// if (process.env.NODE_ENV !== 'production') {
+// 	require('electron-reload')(__dirname, {
+// 		electron : path.join(__dirname, 'node_modules', '.bin', 'electron')
+// 	});
+// }
 
 // Declaramos las ventanas que se van a abrir
 let mainWindow;
 let iniciarWindow;
 
 app.on('ready', () => {
-	Menu.setApplicationMenu(null);
+	// Menu.setApplicationMenu(null);
 	mainWindow = new BrowserWindow({
 		webPreferences : {
 			nodeIntegration : true
@@ -35,7 +35,7 @@ app.on('ready', () => {
 
 	const mainMenu = Menu.buildFromTemplate(templateMenu);
 
-	// Menu.setApplicationMenu(mainMenu);
+	Menu.setApplicationMenu(mainMenu);
 
 	// Cuando se cierre la ventana principal, cierra todo el resto
 	mainWindow.on('closed', () => {

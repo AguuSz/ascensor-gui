@@ -11,7 +11,7 @@ const iniciar = document.getElementById('iniciarBtn');
 iniciar.addEventListener('click', function (event) {
 	var options = {
 		scriptPath : path.join(__dirname, '../', 'scripts'),
-		pythonPath : '/home/agus/.local/share/virtualenvs/facialRecog-OpenCV-SWeLqkmQ/bin/python'
+		pythonPath : path.join(__dirname, '../', '../', 'python/', 'bin/', 'python3.7')
 	};
 
 	ps.PythonShell.run('app.py', options, function (err, results) {
