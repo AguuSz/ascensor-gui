@@ -1,0 +1,5 @@
+26/07
+Se actualiza el repositorio de Github, y se intenta organizar todos los archivos, de manera que cuando una persona clone el repositorio, sea capaz de hacer correr todo, sin necesidad de instalar ningun tipo de dependencias. Esto se logra incorporando la version de Python, junto con sus dependencias en el mismo directorio donde se ubican las demas cosas.
+
+Tener en cuenta que por el momento no anda, esta tirando un error desconocido, pero que de igual manera, en la version que esta disponible en Desktop/ascensor-gui/ anda perfectamente, asi que comparar esta version con esa y ver que es lo que esta mal. Una vez este sin error alguno, commitearla como la version que anda y subirla a Github, de esa manera el directorio va a quedar actualizado y bien redactado.
+El objetivo de esto es hacer que persona que entre al repositorio pueda tener un claro entendimiento de lo que se esta haciendo en el proyecto y como el puede instalar todo lo explicado.
