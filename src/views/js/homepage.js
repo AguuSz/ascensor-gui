@@ -9,9 +9,10 @@ const estado = document.getElementById('estado');
 
 const iniciar = document.getElementById('iniciarBtn');
 iniciar.addEventListener('click', function (event) {
+	console.log(__dirname);
 	var options = {
 		scriptPath : path.join(__dirname, '../', 'scripts'),
-		pythonPath : path.join(__dirname, '../', '../', 'python/', 'bin/', 'python3.7')
+		pythonPath : path.join(__dirname, '../', '../', 'python/', 'bin/', 'python')
 	};
 
 	ps.PythonShell.run('app.py', options, function (err, results) {

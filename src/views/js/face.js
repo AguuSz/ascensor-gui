@@ -11,7 +11,7 @@ addBtn.addEventListener('click', function (event) {
 
 	var options = {
 		scriptPath : path.join(__dirname, '../scripts/'),
-		pythonPath : path.join(__dirname, '../', '../', 'python/', 'bin/', 'python3.7'),
+		pythonPath : path.join(__dirname, '../', '../', 'python/', 'bin/', 'python'),
 		args       : [
 			'cam',
 			name
