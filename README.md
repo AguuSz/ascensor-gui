@@ -23,7 +23,7 @@ Por el momento (v2) para poder instalar la aplicacion y tenerla corriendo en nue
 **Clonando el repositorio**
 
 ```
-git clone -link-
+git clone https://github.com/AguuSz/ascensor-gui.git
 ```
 
 ### Instalar app
